@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cajero Automático</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cajero">
+    <!-- Pantalla -->
+    <div class="pantalla" id="pantalla">
+      <h2>Seleccione tipo de retiro</h2>
+      <button class="opcion nequi" onclick="iniciarNequi()">📱 Retiro por Número de Celular (NEQUI)</button>
+      <button class="opcion" disabled>🐷 Retiro Ahorro a la Mano</button>
+      <button class="opcion" disabled>💳 Retiro por Cuenta de Ahorros</button>
+    </div>
+
+    <!-- Teclado -->
+    <div class="teclado">
+      <div class="numerico">
+        <button class="num">1</button>
+        <button class="num">2</button>
+        <button class="num">3</button>
+        <button class="num">4</button>
+        <button class="num">5</button>
+        <button class="num">6</button>
+        <button class="num">7</button>
+        <button class="num">8</button>
+        <button class="num">9</button>
+        <button class="num">0</button>
+      </div>
+      <div class="acciones">
+        <button id="enter">✔ ENTER</button>
+        <button id="cancel">❌ CANCELAR</button>
+        <button id="reiniciar">🔄 REINICIAR</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/acarreo.js"></script>
+  <script src="js/nequi.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="atm-container">
+        <div class="atm-header">
+            <h1>CAJERO AUTOMÁTICO</h1>
+        </div>
+        
+        <div class="atm-screen">
+            <div id="screen-content">
+                <h2>Bienvenido</h2>
+                <p>Seleccione el tipo de retiro:</p>
+                <div class="menu-options">
+                    <button class="menu-btn" onclick="selectFlow('nequi')">Retiro por Celular (Nequi)</button>
+                    <button class="menu-btn" onclick="selectFlow('ahorro')">Ahorro a la Mano</button>
+                    <button class="menu-btn" onclick="selectFlow('cuenta')">Cuenta de Ahorros</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Reorganized keypad to match the provided image layout -->
+        <div class="atm-keypad">
+            <div class="keypad-grid">
+                <!-- Row 1: 1, 2, 3, empty -->
+                <button class="key-btn number" onclick="inputNumber('1')">1</button>
+                <button class="key-btn number" onclick="inputNumber('2')">2</button>
+                <button class="key-btn number" onclick="inputNumber('3')">3</button>
+                <button class="key-btn empty"></button>
+                
+                <!-- Row 2: 4, 5, 6, CANCEL -->
+                <button class="key-btn number" onclick="inputNumber('4')">4</button>
+                <button class="key-btn number" onclick="inputNumber('5')">5</button>
+                <button class="key-btn number" onclick="inputNumber('6')">6</button>
+                <button class="key-btn special cancel" onclick="cancelTransaction()">CANCEL</button>
+                
+                <!-- Row 3: 7, 8, 9, CLEAR -->
+                <button class="key-btn number" onclick="inputNumber('7')">7</button>
+                <button class="key-btn number" onclick="inputNumber('8')">8</button>
+                <button class="key-btn number" onclick="inputNumber('9')">9</button>
+                <button class="key-btn special clear" onclick="clearInput()">CLEAR</button>
+                
+                <!-- Row 4: -, 0, +, ENTER -->
+                <button class="key-btn symbol" onclick="inputNumber('-')">-</button>
+                <button class="key-btn number" onclick="inputNumber('0')">0</button>
+                <button class="key-btn symbol" onclick="inputNumber('+')">+</button>
+                <button class="key-btn special enter" onclick="enterInput()">ENTER</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

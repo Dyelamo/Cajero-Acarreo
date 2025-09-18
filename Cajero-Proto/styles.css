@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.atm-container {
+  background: #2c3e50;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+}
+
+.atm-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.atm-header h1 {
+  color: #ecf0f1;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.atm-screen {
+  background: #34495e;
+  border: 3px solid #1abc9c;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 300px;
+  color: #ecf0f1;
+}
+
+.atm-screen h2 {
+  color: #1abc9c;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.atm-screen p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.menu-btn:hover {
+  background: #2980b9;
+}
+
+.atm-keypad {
+  margin-bottom: 20px;
+}
+
+.keypad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.key-btn {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 60px;
+}
+
+.key-btn.number {
+  background: #95a5a6;
+  color: #2c3e50;
+}
+
+.key-btn.number:hover {
+  background: #7f8c8d;
+}
+
+.key-btn.symbol {
+  background: #95a5a6;
+  color: #2c3e50;
+}
+
+.key-btn.symbol:hover {
+  background: #7f8c8d;
+}
+
+.key-btn.empty {
+  background: #7f8c8d;
+  cursor: default;
+  opacity: 0.5;
+}
+
+.key-btn.empty:hover {
+  background: #7f8c8d;
+}
+
+.key-btn.special {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.key-btn.special.cancel {
+  background: #e74c3c;
+  color: white;
+}
+
+.key-btn.special.cancel:hover {
+  background: #c0392b;
+}
+
+.key-btn.special.clear {
+  background: #f1c40f;
+  color: #2c3e50;
+}
+
+.key-btn.special.clear:hover {
+  background: #f39c12;
+}
+
+.key-btn.special.enter {
+  background: #27ae60;
+  color: white;
+}
+
+.key-btn.special.enter:hover {
+  background: #229954;
+}
+
+.key-btn.action {
+  background: #e74c3c;
+  color: white;
+}
+
+.key-btn.action:hover {
+  background: #c0392b;
+}
+
+.input-field {
+  background: #2c3e50;
+  color: #1abc9c;
+  border: 2px solid #1abc9c;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+.password-field {
+  background: #2c3e50;
+  color: #1abc9c;
+  border: 2px solid #1abc9c;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  width: 100%;
+  letter-spacing: 8px;
+}
+
+.hidden-input {
+  background: #2c3e50;
+  color: #2c3e50;
+  border: 2px solid #1abc9c;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.success-message {
+  background: #27ae60;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.error-message {
+  background: #e74c3c;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.bill-breakdown {
+  background: #34495e;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.bill-breakdown h4 {
+  color: #1abc9c;
+  margin-bottom: 10px;
+}
+
+.bill-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  color: #ecf0f1;
+}
+
+.screen-timer {
+  background: #e74c3c;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.amount-display {
+  background: #1abc9c;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.amount-btn {
+  background-color: #1abc9c;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  margin: 5px;
+}
+
+.amount-btn:hover {
+  background: #16a085;
+}
+
+@media (max-width: 768px) {
+  .atm-container {
+    padding: 20px;
+  }
+
+  .amounts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .keypad-grid {
+    max-width: 320px;
+  }
+
+  .key-btn {
+    padding: 12px;
+    font-size: 16px;
+    min-height: 50px;
+  }
+
+  .key-btn.special {
+    font-size: 12px;
+  }
+}
